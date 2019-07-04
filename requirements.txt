@@ -1,0 +1,9 @@
+vk_api
+mysql_connector
+websockets
+chardet
+aiohttp
+pytz
+datetime
+time
+calendar
