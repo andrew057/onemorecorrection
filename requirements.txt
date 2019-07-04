@@ -4,6 +4,3 @@ websockets
 chardet
 aiohttp
 pytz
-datetime
-time
-calendar
