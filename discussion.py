@@ -12,7 +12,7 @@ import time
 import mysql.connector
 import os 
 token = os.environ.get('BOT_TOKEN')
-vk_session = vk_api.VkApi( token=token)
+vk_session = vk_api.VkApi( token=token )
 session_api = vk_session.get_api()
 longpoll = VkLongPoll(vk_session)
 def sqlQuery( query, number ):
@@ -99,7 +99,7 @@ while True:
                     i = i + 1
                 except Exception:
                     break
-            vk_session.method('board.addTopic', {'group_id': '177844818', 'title': 'Oнлайн ['+str(mas[0]) + ' - ' + str(mas[6] ) + ']', 'text': str( string ), 'from_group':'1'})
+            vk_session.method('board.addTopic', {'group_id': '184133413', 'title': 'Oнлайн ['+str(mas[0]) + ' - ' + str(mas[6] ) + ']', 'text': str( string ), 'from_group':'1'})
     time.sleep(1)
 
                     
