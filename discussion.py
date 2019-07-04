@@ -36,8 +36,7 @@ def mounth():
     return int( x[5:7] )
 def chislo():
     x = str( datetime.datetime.now(pytz.timezone("Europe/Moscow")) )
-    #return int( x[8:10] )
-    return 5
+    return int( x[8:10] )
 def hoursMinutes():
     now = str( datetime.datetime.now(pytz.timezone("Europe/Moscow")) )
     res = now[11:16]
@@ -74,12 +73,10 @@ def tostring( string ):
     if string[len(string) - 1] != ' ':
         tmp = tmp + string[len(string) - 1]
     return tmp
-print( diskussion() )
-print( date( 2019, mounth(), chislo() ).isoweekday() )
 while True:
     x,y,z= timez()
     if x %1 == 0 or y ==0 or z == 0:
-        if date( 2019, mounth(), chislo() ).isoweekday() == 5:
+        if date( 2019, mounth(), chislo() ).isoweekday() == 4:
             result = sqlQuery( 'select * from everyData', 1 )
             i = 0
             string = ''
@@ -97,15 +94,13 @@ while True:
                             tmpOnlik = 'None'
                         if tmpOnlik != 'None':
                             onlik = onlik + int( tmpOnlik )
-                        print( tmpOnlik )
                     onlik = str( onlik//60 ) + ' hours, ' + str( onlik%60 ) + ' minutes '
                     string = string + str( tmpnick ) + ' - ' + str( onlik ) + '\n'
                     i = i + 1
                 except Exception:
                     break
-            print( string )
             vk_session.method('board.addTopic', {'group_id': '177844818', 'title': 'Онлайн ['+str(mas[0]) + ' - ' + str(mas[6] ) + ']', 'text': str( string ), 'from_group':'1'})
-    time.sleep(1)
+    time.sleep(100)
 
                     
                              
