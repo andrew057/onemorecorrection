@@ -99,7 +99,7 @@ while True:
                     i = i + 1
                 except Exception:
                     break
-            vk_session.method('board.addTopic', {'group_id': '177844818', 'title': 'Онлайн ['+str(mas[0]) + ' - ' + str(mas[6] ) + ']', 'text': str( string ), 'from_group':'1'})
+            vk_session.method('board.addTopic', {'group_id': '177844818', 'title': 'Oнлайн ['+str(mas[0]) + ' - ' + str(mas[6] ) + ']', 'text': str( string ), 'from_group':'1'})
     time.sleep(1)
 
                     
