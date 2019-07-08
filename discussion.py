@@ -80,7 +80,6 @@ while True:
             result = sqlQuery( 'select * from everyData', 1 )
             i = 0
             string = ''
-            print( result )
             while True:
                 try:
                     tmpnick = tostring( str( result[i][0] ) )
