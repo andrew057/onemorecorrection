@@ -51,12 +51,12 @@ def diskussion():
     else:
         lastmounthd = str( mounth() - 1 )
     if chislo() >= 8:
-        mas = [0]*7
+        mas = []
         for i in range( chislo() - 7, chislo() ):
             if i < 10:
-                mas[i] = '0' + str( i ) + '.' + str( mounthd )
+                mas.append( '0' + str( i ) + '.' + str( mounthd ) )
             else:
-                mas[i] = str( i ) + '.' + str( mounthd )
+                mas.append( str( i ) + '.' + str( mounthd ) )
     else:
         x = calendar.monthrange( 2019, mounth() - 1 )[1]
         mas = []
