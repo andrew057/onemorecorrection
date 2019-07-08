@@ -17,7 +17,7 @@ session_api = vk_session.get_api()
 longpoll = VkLongPoll(vk_session)
 def sqlQuery( query, number ):
    ps = os.environ.get('PASSWORD')
-   conn = mysql.connector.connect( host = 'sql2.freemysqlhosting.net', user = 'sql2297188', password = str( ps ), database = 'sql2297188' )
+   conn = mysql.connector.connect( host = '46.174.50.9', user = 'u8894_testonlik', password = str( ps ), database = 'u8894_testonlik' )
    cursor = conn.cursor()
    cursor.execute(query)
    if number == 1:
@@ -75,7 +75,7 @@ def tostring( string ):
     return tmp
 while True:
     x,y,z= timez()
-    if x  == 0 and y == 0 and z == 0:
+    if x  % 1 ==  0 or y == 0 or z == 0:
         if date( 2019, mounth(), chislo() ).isoweekday() == 1:
             result = sqlQuery( 'select * from everyData', 1 )
             i = 0
@@ -100,7 +100,7 @@ while True:
                 except Exception:
                     break
             vk_session.method('board.addTopic', {'group_id': '184133413', 'title': 'Oнлайн ['+str(mas[0]) + ' - ' + str(mas[6] ) + ']', 'text': str( string ), 'from_group':'1'})
-    time.sleep(1)
+    time.sleep(100)
 
                     
                              
