@@ -75,8 +75,8 @@ def tostring( string ):
     return tmp
 while True:
     x,y,z= timez()
-    if x  %1 ==  0 or y == 0 or z == 0:
-        if date( 2019, mounth(), chislo() ).isoweekday() == 5:
+    if x   ==  0 and y == 0 and z == 0:
+        if date( 2019, mounth(), chislo() ).isoweekday() == 1:
             result = sqlQuery( 'select * from everyData', 1 )
             i = 0
             string = ''
