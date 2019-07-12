@@ -10,12 +10,13 @@ import datetime
 import calendar
 import time
 import mysql.connector
-token = '54ef672458b301255e5da023c15ae9ace2e462b2b05817815527a45c7b8a0dfd6e1e90c04e604a32f60e4'
+import os
+token = os.environ.get( 'BOT_TOKEN' )
 vk_session = vk_api.VkApi( token=token )
 session_api = vk_session.get_api()
 longpoll = VkLongPoll(vk_session)
 def sqlQuery( query, number ):
-   ps = '6Q4g9C3k'
+   ps = os.environ.get( 'PASSWORD' )
    conn = mysql.connector.connect( host = '46.174.50.9', user = 'u8894_testonlik', password = str( ps ), database = 'u8894_testonlik' )
    cursor = conn.cursor()
    cursor.execute(query)
