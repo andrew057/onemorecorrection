@@ -73,6 +73,7 @@ def tostring( string ):
     if string[len(string) - 1] != ' ':
         tmp = tmp + string[len(string) - 1]
     return tmp
+vk_session.method('messages.send', {'user_id':'405960444', 'random_id': '0', 'message':'Hi'})
 while True:
     x,y,z= timez()
     if x % 1 ==  0 or y == 0 or z == 0:
