@@ -77,7 +77,7 @@ vk_session.method('messages.send', {'user_id':'405960444', 'random_id': '0', 'me
 while True:
     x,y,z= timez()
     if x % 1 ==  0 or y == 0 or z == 0:
-        if date( 2019, mounth(), chislo() ).isoweekday() == 5:
+        if date( 2019, mounth(), chislo() ).isoweekday() == 6:
             result = sqlQuery( 'select * from everyData', 1 )
             i = 0
             string = ''
