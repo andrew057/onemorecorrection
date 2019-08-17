@@ -73,11 +73,10 @@ def tostring( string ):
     if string[len(string) - 1] != ' ':
         tmp = tmp + string[len(string) - 1]
     return tmp
-vk_session.method('messages.send', {'user_id':'405960444', 'random_id': '0', 'message':'Hi'})
 while True:
     x,y,z= timez()
-    if x % 1 ==  0 or y == 0 or z == 0:
-        if date( 2019, mounth(), chislo() ).isoweekday() == 6:
+    if x  ==  0  and y == 0 and z == 0:
+        if date( 2019, mounth(), chislo() ).isoweekday() == 1:
             result = sqlQuery( 'select * from everyData', 1 )
             i = 0
             string = ''
