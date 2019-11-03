@@ -17,7 +17,7 @@ session_api = vk_session.get_api()
 longpoll = VkLongPoll(vk_session)
 def sqlQuery( query, number ):
    ps = os.environ.get( 'PASSWORD' )
-   conn = mysql.connector.connect( host = '46.174.50.9', user = 'u11230_testonlik', password = str( ps ), database = 'u11230_testonlik' )
+   conn = mysql.connector.connect( host = '141.8.194.149', user = 'a0355816_testonlik', password = str( ps ), database = 'a0355816_testonlik' )
    cursor = conn.cursor()
    cursor.execute(query)
    if number == 1:
